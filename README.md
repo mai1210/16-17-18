@@ -1,4 +1,4 @@
-# 16-17-18
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -64,66 +64,94 @@
         <!-- Bài 16 -->
         <h1>Bài 16</h1>
         <ol>
-            <li>LUYỆN TẬP 1: Phần tử HTML có thể ẩn đi trên trang web được không? Nếu có thì dùng lệnh CSS gì?</li>
-            <div class="highlight">
-                <p><strong>Trả lời:</strong> Có thể ẩn phần tử HTML trên trang web bằng cách sử dụng lệnh CSS:</p>
-                <code>visibility: hidden;</code>
-                <p>hoặc:</p>
-                <code>display: none;</code>
-            </div>
-            <li>LUYỆN TẬP 2: Hãy giải thích ý nghĩa định dạng sau:</li>
-            <div class="highlight">
-                <code>.test .test_more { background-color: red; }</code>
-                <p><strong>Giải thích:</strong> Đây là định dạng CSS quy định rằng bất kỳ phần tử HTML nào có lớp <code>test_more</code> và nằm bên trong phần tử có lớp <code>test</code> sẽ được áp dụng màu nền <code>red</code> (đỏ).</p>
-            </div>
-            <li>VẬN DỤNG 1: Giả sử nội dung trang web của em có rất nhiều thẻ <code>p</code>, trong đó có ba đoạn mà em thấy quan trọng nhất, ký hiệu các đoạn này là P1, P2, P3. Có cách nào thiết lập định dạng CSS để có thể định dạng P1 khác biệt, P2 và P3 có cùng kiểu và cũng khác biệt không? Tất cả các đoạn còn lại có định dạng giống nhau. Hãy nêu cách giải quyết vấn đề của em.</li>
-            <div class="highlight">
-                <p><strong>Trả lời:</strong></p>
-                <ul>
-                    <li>Gắn một lớp tên riêng cho P1, ví dụ: <code>&lt;p class="important"&gt;Đoạn P1&lt;/p&gt;</code>.</li>
-                    <li>Gắn cùng một lớp tên cho P2 và P3, ví dụ: <code>&lt;p class="normal"&gt;Đoạn P2&lt;/p&gt;</code>, <code>&lt;p class="normal"&gt;Đoạn P3&lt;/p&gt;</code>.</li>
-                    <li>Sử dụng CSS để áp dụng các định dạng khác biệt:</li>
-                    <code>
-                        .important { color: red; font-weight: bold; }<br>
-                        .normal { color: blue; font-style: italic; }
-                    </code>
-                </ul>
-            </div>
-            <li>VẬN DỤNG 2: Có thể thiết lập định dạng cho các khung với thông số khung, viền trên, dưới, trái, phải khác nhau được không? Em hãy tìm hiểu và trình bày cách thiết lập định dạng CSS cho các khung, viền như vậy.</li>
-            <div class="highlight">
-                <p><strong>Trả lời:</strong> Hoàn toàn có thể thiết lập. Sử dụng CSS để định dạng như sau:</p>
-                <code>
-                    .box { <br>
-                        border-top: 3px solid red; <br>
-                        border-bottom: 5px dashed blue; <br>
-                        border-left: 2px dotted green; <br>
-                        border-right: 4px double black; <br>
-                    }
-                </code>
-                <p>Ví dụ minh họa: <code>&lt;div class="box"&gt;Nội dung&lt;/div&gt;</code>.</p>
-            </div>
+            <li><strong>LUYỆN TẬP 1:</strong> Phần tử HTML có thể ẩn đi trên trang web được không? Nếu có thì dùng lệnh CSS gì?
+                <div class="highlight">
+                    <p><strong>Trả lời:</strong> Có thể ẩn phần tử HTML bằng cách sử dụng:</p>
+                    <code>visibility: hidden;</code>
+                    <p>hoặc:</p>
+                    <code>display: none;</code>
+                </div>
+            </li>
+            <li><strong>LUYỆN TẬP 2:</strong> Hãy giải thích ý nghĩa của định dạng sau:
+                <div class="highlight">
+                    <code>.test .test_more { background-color: red; }</code>
+                    <p><strong>Giải thích:</strong> Định dạng này áp dụng màu nền <code>red</code> cho bất kỳ phần tử HTML nào có lớp <code>test_more</code> nằm trong phần tử có lớp <code>test</code>.</p>
+                </div>
+            </li>
+            <li><strong>VẬN DỤNG 1:</strong> Có cách nào định dạng các đoạn P1, P2, P3 khác nhau và giữ nguyên định dạng cho các đoạn còn lại không? Hãy nêu cách giải quyết.
+                <div class="highlight">
+                    <p><strong>Trả lời:</strong></p>
+                    <ul>
+                        <li>Gắn lớp <code>important</code> cho P1: <code>&lt;p class="important">P1&lt;/p&gt;</code>.</li>
+                        <li>Gắn lớp <code>normal</code> cho P2 và P3: <code>&lt;p class="normal">P2&lt;/p&gt;</code>, <code>&lt;p class="normal">P3&lt;/p&gt;</code>.</li>
+                        <li>Sử dụng CSS:
+                            <pre>
+.important {
+    color: red;
+    font-weight: bold;
+}
+.normal {
+    color: blue;
+    font-style: italic;
+}
+                            </pre>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><strong>VẬN DỤNG 2:</strong> Có thể định dạng các khung với thông số viền khác nhau không? Nếu có, hãy trình bày cách thực hiện.
+                <div class="highlight">
+                    <p><strong>Trả lời:</strong> Hoàn toàn có thể sử dụng CSS:</p>
+                    <pre>
+.box {
+    border-top: 3px solid red;
+    border-bottom: 5px dashed blue;
+    border-left: 2px dotted green;
+    border-right: 4px double black;
+}
+                    </pre>
+                    <p>Ví dụ minh họa: <code>&lt;div class="box">Nội dung&lt;/div&gt;</code>.</p>
+                </div>
+            </li>
         </ol>
 
         <!-- Bài 17 -->
         <h1>Bài 17</h1>
         <ol>
-            <li>LUYỆN TẬP 1: Giải thích sự khác nhau giữa hai định dạng sau:</li>
-            <div class="highlight">
-                <code>#p123 + p { color: red; }</code>  
-                <code>h2#p123 + p { color: red; }</code>  
-                <p><strong>Trả lời:</strong></p>
-                <ul>
-                    <li><code>#p123 + p</code>: Chọn thẻ <code>p</code> ngay sau phần tử có ID là <code>p123</code>.</li>
-                    <li><code>h2#p123 + p</code>: Chọn thẻ <code>p</code> ngay sau một thẻ <code>h2</code> có ID là <code>p123</code>.</li>
-                </ul>
-            </div>
+            <li><strong>LUYỆN TẬP 1:</strong> Giải thích sự khác nhau giữa hai định dạng sau:
+                <div class="highlight">
+                    <code>#p123 + p { color: red; }</code>  
+                    <code>h2#p123 + p { color: red; }</code>  
+                    <p><strong>Trả lời:</strong></p>
+                    <ul>
+                        <li><code>#p123 + p</code>: Áp dụng cho thẻ <code>p</code> ngay sau phần tử có ID <code>p123</code>.</li>
+                        <li><code>h2#p123 + p</code>: Áp dụng cho thẻ <code>p</code> ngay sau một thẻ <code>h2</code> có ID <code>p123</code>.</li>
+                    </ul>
+                </div>
+            </li>
+            <li><strong>LUYỆN TẬP 2:</strong> Trong phần thực hành, cần định dạng các tên riêng (người, tổ chức) bằng cách đóng khung và in nghiêng. Thực hiện như sau:
+                <div class="highlight">
+                    <pre>
+.name {
+    font-style: italic; /* In nghiêng */
+    border: 1px solid #000; /* Đóng khung */
+    padding: 2px; /* Thêm khoảng cách */
+    display: inline-block; /* Gọn gàng */
+}
+                    </pre>
+                </div>
+            </li>
         </ol>
 
         <!-- Bài 18 -->
         <h1>Bài 18</h1>
         <ol>
-            <li>LUYỆN TẬP:</li>
-            <a href="https://mai1210.github.io/LUY-N-T-P-B-I-18/" target="_blank">bài 1, 2</a>. Viết lại cho đúng.
+            <li><strong>LUYỆN TẬP:</strong> 
+                <a href="https://mai1210.github.io/LUY-N-T-P-B-I-18/" target="_blank">Bài 1, 2</a>
+            </li>
+            <li><strong>VẬN DỤNG:</strong> 
+                <a href="https://mai1210.github.io/LUY-N-T-P-B-I-18/" target="_blank">Bài 1, 2</a>
+            </li>
         </ol>
     </div>
 </body>
